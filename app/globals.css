@@ -22,8 +22,8 @@ body {
 }
 
 .card {
-  width: min(94vw, 540px);
-  background: rgba(255, 255, 255, 0.85);
+  width: min(94vw, 560px);
+  background: rgba(255, 255, 255, 0.88);
   border: 3px solid #ff8fc9;
   border-radius: 1.5rem;
   padding: 1.5rem;
@@ -50,7 +50,7 @@ h1 {
 }
 
 .subtitle {
-  opacity: 0.9;
+  opacity: 0.92;
   margin-bottom: 1.2rem;
 }
 
@@ -59,13 +59,14 @@ h1 {
   opacity: 0.85;
 }
 
-.button-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-  min-height: 5rem;
+.button-arena {
   position: relative;
+  height: 130px;
+  width: 100%;
+  border-radius: 1rem;
+  background: rgba(255, 180, 219, 0.2);
+  border: 1.5px dashed rgba(210, 36, 120, 0.35);
+  margin-top: 0.6rem;
 }
 
 .btn {
@@ -75,7 +76,7 @@ h1 {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease;
+  transition: transform 220ms ease, box-shadow 220ms ease, opacity 220ms ease, left 200ms ease, top 200ms ease;
 }
 
 .btn:focus-visible {
@@ -84,27 +85,32 @@ h1 {
 }
 
 .btn.yes {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   background: linear-gradient(135deg, #ff3f99, #ff79bb);
   color: #fff;
   box-shadow: 0 10px 18px rgba(255, 64, 153, 0.35);
 }
 
 .btn.yes:hover {
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(calc(-50% - 2px)) scale(1.03);
 }
 
 .btn.no {
+  position: absolute;
   background: #fff;
   color: #a32561;
   border: 2px solid #ff8fc9;
   box-shadow: 0 8px 14px rgba(163, 37, 97, 0.15);
-  position: relative;
 }
 
 .success-wrap {
   margin-top: 0.5rem;
   padding: 0.8rem 0;
   position: relative;
+  min-height: 240px;
 }
 
 .success-message {
